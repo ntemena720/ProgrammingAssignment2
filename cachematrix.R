@@ -15,7 +15,8 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Function checks inverse matric value, if null it will proceed with getting the inverse matrix, if its not nullit will show inverse matrix
+## Function checks inverse matric value, if NULL it will proceed with getting the inverse matrix
+## if not NULL,it will return the inverse matrix
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
@@ -27,5 +28,5 @@ cacheSolve <- function(x, ...) {
       data <- x$get() # if value is null get data
       inv1 <- solve(data,...) # process X 
       x$setinverse(inv1) # store x
-      inv1 # return processed value
+      inv1 # return inverse matrix
 }
